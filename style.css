@@ -1,0 +1,17 @@
+.parent-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    height: 720px;
+}
+
+.parent-div div {
+    width: 60px;
+    height: 45px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.change {
+    margin: 20px;
+}
