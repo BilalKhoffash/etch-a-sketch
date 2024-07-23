@@ -21,7 +21,11 @@ body {
 }
 
 .change {
-    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 720px;
+    margin-bottom: 20px;
 }
 
 .current-size {
@@ -29,7 +33,8 @@ body {
 }
 
 header, footer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     width: 100%;
     background-color: #4c7d73;
     font-family: 'Bebas Neue';
@@ -38,9 +43,20 @@ header, footer {
 
 header {
     font-size: 48px;
+    margin-bottom: 20px;
 }
 
 footer {
     font-size: 36px;
     margin-top: 40px;
+}
+
+#checkbox {
+    width: 80px;
+    height: 40px;
+}
+
+.normal-div {
+    display: flex;
+    align-items: center;
 }

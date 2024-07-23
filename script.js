@@ -1,6 +1,7 @@
 const parentDiv = document.querySelector('.parent-div');
 const slider = document.querySelector('#slider');
-const currentSize = document.querySelector('.current-size')
+const currentSize = document.querySelector('.current-size');
+const checkBox = document.querySelector('#checkbox');
 
 function createGrid(dimension) {
 	parentDiv.textContent = '';
@@ -24,7 +25,11 @@ function createGrid(dimension) {
 
 	eachDiv.forEach(function (el) {
 		el.addEventListener('mouseover', (e) => {
-			e.target.style.backgroundColor = 'blue';
+			if (checkBox.checked) {
+				e.target.style.backgroundColor = randomizeColor();
+			} else {
+				e.target.style.backgroundColor = 'blue';
+			}
 		});
 	});
 }
@@ -32,6 +37,16 @@ function createGrid(dimension) {
 createGrid(16)
 
 slider.addEventListener("input", (el) => {
-	const dimension = Number(el.target.value)
+	const dimension = Number(el.target.value);
 	createGrid(dimension);
 });
+
+function randomizeColor() {
+
+	const r = Math.floor(Math.random() * 256);
+	const g = Math.floor(Math.random() * 256);
+	const b = Math.floor(Math.random() * 256);
+
+	const toHex = (value) => value.toString(16).padStart(2, '0');
+	return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
