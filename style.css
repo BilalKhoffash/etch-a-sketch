@@ -1,17 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #569a8c;
+}
+
 .parent-div {
     display: flex;
     flex-wrap: wrap;
-    width: 960px;
+    justify-content: center;
+    width: 720px;
     height: 720px;
+    background-color: white;
 }
 
 .parent-div div {
-    width: 60px;
-    height: 45px;
     border: 1px solid black;
     box-sizing: border-box;
 }
 
 .change {
     margin: 20px;
+}
+
+.current-size {
+    display: inline;
+}
+
+header, footer {
+    text-align: center;
+    width: 100%;
+    background-color: #4c7d73;
+    font-family: 'Bebas Neue';
+    padding: 20px;
+}
+
+header {
+    font-size: 48px;
+}
+
+footer {
+    font-size: 36px;
+    margin-top: 40px;
 }
